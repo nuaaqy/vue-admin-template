@@ -11,12 +11,23 @@ git push origin qydev
 git checkout origin/qydev
 git checkout master
 
+直接将本地未提交的内容还原到上一个版本。
+git fetch --all
+git reset --hard origin/master
+git pull
+
+暂存本地修改，将文件还原为服务器版本。如果是新增文件，则不变化。
+git stash
 
 git branch --set-upstream-to=origin/qydev origin/qydev
 
 如果只是简单的将feature分支的文件f.txt copy到master分支上；
 git checkout master
 git checkout feature f.txt
+
+
+
+
 
 一、 Git 常用命令速查
 

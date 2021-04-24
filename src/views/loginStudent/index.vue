@@ -8,12 +8,12 @@
 
       <el-form-item prop="username">
         <span class="svg-container">
-          <svg-icon icon-class="user" /><span style="margin-left:10px;">老师姓名：</span>
+          <svg-icon icon-class="user" /><span style="margin-left:10px;">学生学号：</span>
         </span>
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="这里输入老师姓名全拼"
+          placeholder="这里输入学生学号"
           name="username"
           type="text"
           tabindex="1"
@@ -44,8 +44,8 @@
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">老师姓名：输入老师姓名全拼。</span>
-        <span></span>
+        <span style="margin-right:20px;">学号的格式为：四位入学年+两位班级号+两位学号；</span>
+        <span>密码请向老师咨询。</span>
       </div>
 
     </el-form>
@@ -56,11 +56,11 @@
 import { validUsername } from '@/utils/validate'
 
 export default {
-  name: 'Login',
+  name: 'LoginStudent',
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
-        callback(new Error('请输入正确的姓名全拼'))
+        callback(new Error('请输入正确的学号'))
       } else {
         callback()
       }
@@ -74,7 +74,7 @@ export default {
     }
     return {
       loginForm: {
-        username: 'wuqingping',
+        username: '20201101',
         password: ''
       },
       loginRules: {
