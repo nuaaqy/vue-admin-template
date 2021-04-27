@@ -97,6 +97,20 @@ export const constantRoutes = [
   },
 
   {
+    path: '/at',
+    component: Layout,
+    children: [
+      {
+        path: '',   //指定路径
+        name: 'At',
+        component: () => import('@/views/at/index'),
+        meta: { title: 'At', icon: 'form' }
+      }
+    ]
+  },
+
+
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
