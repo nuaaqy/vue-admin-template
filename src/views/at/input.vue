@@ -54,25 +54,7 @@ export default {
           name: "王小虎",
           degree: "100",
           grade: "1",
-        },
-        {
-          number: "10",
-          name: "王小虎",
-          degree: "100",
-          grade: "1",
-        },
-        {
-          number: "10",
-          name: "王小虎",
-          degree: "100",
-          grade: "1",
-        },
-        {
-          number: "10",
-          name: "王小虎",
-          degree: "100",
-          grade: "1",
-        },
+        }
       ],
       textareaInput: "1 2\n2 3\n4 5",
       stuObj:[]
