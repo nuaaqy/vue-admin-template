@@ -108,6 +108,18 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/input',
+    component: Layout,
+    children: [
+      {
+        path: '',   //指定路径
+        name: 'Input',
+        component: () => import('@/views/at/input'),
+        meta: { title: '输入金额', icon: 'form' }
+      }
+    ]
+  },
 
 
   {
